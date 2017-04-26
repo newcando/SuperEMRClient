@@ -65,17 +65,14 @@ class teamRegisterViewController: UIViewController {
         ]
         Alamofire.request(.POST, self.url+"/registTeam/", parameters: params)
             .validate()
-            .response { request, response, data, error in
-                print(request)
-                print(response)
-                print(data)
-                print(error)
+            .responseJSON {response in
+                //                print(response)
+                let jsonData = response.result.value as! Dictionary<String,AnyObject>
+                let code = jsonData["code"] as! Int
+                print(jsonData)
                 //Convert NSData to NSString
-                let resultNSString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
                 //Convert NSString to String
-                let resultString = resultNSString as String
-                print(resultString)
-                if error==nil && resultString == "Team register is successful."{
+                if code==0{
                     //
                     self.teamName.text = ""
                     self.email.text = ""
@@ -88,7 +85,9 @@ class teamRegisterViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
                 }else{
-                    let alertController = UIAlertController(title: "团队注册", message:resultString, preferredStyle: UIAlertControllerStyle.Alert)
+                    let msg = jsonData["msg"] as! String
+                    print(msg)
+                    let alertController = UIAlertController(title: "团队注册", message:msg, preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
                 }

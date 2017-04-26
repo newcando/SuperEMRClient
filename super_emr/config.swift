@@ -8,5 +8,5 @@
 
 import Foundation
     
-//let baseurl = "http://192.168.0.4:8000"
-let baseurl = "http://116.62.108.201:20000"
+let baseurl = "http://192.168.0.4:8000"
+//let baseurl = "http://116.62.108.201:80"
