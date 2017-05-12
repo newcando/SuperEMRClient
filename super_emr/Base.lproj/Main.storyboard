@@ -1532,7 +1532,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="148" y="197" width="104" height="97"/>
+                                    <rect key="frame" x="148" y="197" width="104" height="96"/>
                                     <mask key="constraints">
                                         <include reference="obP-0S-U84"/>
                                     </mask>
@@ -1555,7 +1555,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="148" y="330" width="104" height="96"/>
+                                    <rect key="frame" x="148" y="329" width="104" height="97"/>
                                     <mask key="constraints">
                                         <include reference="O5d-9N-Bqb"/>
                                     </mask>
@@ -1593,7 +1593,7 @@
                                         <exclude reference="vdj-pS-LzG"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="687"/>
                                     <mask key="constraints">
                                         <include reference="3Tm-mD-26v"/>
@@ -1660,7 +1660,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="超级病历" id="qLw-ox-nux">
-                        <barButtonItem key="leftBarButtonItem" title="铃铛" id="EAO-xi-kXg"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YTg-UC-i09">
                             <connections>
                                 <segue destination="z9o-2U-gsa" kind="show" id="10m-xC-1Q1"/>
